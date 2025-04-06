@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <style>
+        span {
+            display: none;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .inputgroup {
+            text-align: center;
+            background-color: rgb(15, 155, 225);
+            max-width: 400px;
+            height: 80px;
+            border-radius: 6px;
+            margin-left: 750px;
+            margin-top: 400px;
+        }
+
+        .inputgroup input {
+            border-radius: 4px;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 25px;
+            box-shadow: 5px 2px 2px red;
+        }
+
+        .inputgroup button {
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            background-color: green;
+            color: white;
+            margin-top: 25px;
+            margin-left: 10px;
+        }
+
+        .inputgroup button:hover {
+            background-color: rgb(6, 135, 6);
+        }
+
+        .inputgroup input:focus {
+            padding: 12px 22px;
+            box-shadow: 7px 4px 5px rgb(91, 233, 9);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 29px;
+        }
+
+        p {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: fixed;
+            top: 400px;
+            left: 700px;
+        }
+        #adelete {
+            text-decoration: underline;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting list</title>
+</head>
+<body>
+
+    <h1>Waiting list</h1>
+    <p>Join our waiting list and be the first one, who can discover our App</p>
+    <div class="inputgroup">
+        <input placeholder="E-Mail" id="input">
+        <button id="btn" onclick="send()">Sign In</button>
+    </div>
+  
+    <span id="span">Please enter a valid email</span>
+
+    <footer>
+        <text style="font-family: 'Courier New', Courier, monospace;">Extra Functions:</text>
+        <a onclick="deleteall()" id="adelete">Delete all entrys</a>
+        <a onclick="yourfunction()" id="adelete">a Function of yours?</a>
+    </footer>
+</body>
+</html>
+<script src="script.js"></script>
