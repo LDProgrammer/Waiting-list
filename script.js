@@ -1,6 +1,6 @@
 let emails = JSON.parse(localStorage.getItem("emails")) || [];
 
-console.log(emails);
+
 var number = document.getElementById("numberp");
 number.innerHTML = emails.length;
 
