@@ -3,9 +3,9 @@ let emails = JSON.parse(localStorage.getItem("emails")) || [];
 var number = document.getElementById("numberp");
 
 if (emails.length > 1) {
-    number.innerHTML = emails.length + " Persons";
+    number.innerHTML = emails.length + " Persons are";
 } else {
-    number.innerHTML = emails.length + " Person";
+    number.innerHTML = emails.length + " Person is";
 }
 
 
@@ -20,9 +20,9 @@ function send() {
     span.style.display = "none";
     emails.push(input.value);
     if (emails.length > 1) {
-        number.innerHTML = emails.length + " Persons";
+        number.innerHTML = emails.length + " Persons are";
     } else {
-        number.innerHTML = emails.length + " Person";
+        number.innerHTML = emails.length + " Person is";
     }
     localStorage.setItem("emails", JSON.stringify(emails));
     input.value = "";
@@ -36,9 +36,9 @@ function deleteall() {
             emails = [];
             localStorage.setItem("emails", JSON.stringify(emails)); // You write this code, when something happens with the entries in the array
             if (emails.length > 1) {
-                number.innerHTML = emails.length + " Persons";
+                number.innerHTML = emails.length + " Persons are";
             } else {
-                number.innerHTML = emails.length + " Person";
+                number.innerHTML = emails.length + " Person is";
             }
             console.warn("All entries were deleted!");
             console.log(emails);
