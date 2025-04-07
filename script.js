@@ -1,8 +1,13 @@
 let emails = JSON.parse(localStorage.getItem("emails")) || [];
 
-
 var number = document.getElementById("numberp");
-number.innerHTML = emails.length;
+
+if (emails.length > 1) {
+    number.innerHTML = emails.length + " Persons";
+} else {
+    number.innerHTML = emails.length + " Person";
+}
+
 
 function send() {
     var input = document.getElementById("input");
@@ -14,7 +19,11 @@ function send() {
     alert("A notification will be send to " + input.value + ", when the app is published");
     span.style.display = "none";
     emails.push(input.value);
-    number.innerHTML = emails.length;
+    if (emails.length > 1) {
+        number.innerHTML = emails.length + " Persons";
+    } else {
+        number.innerHTML = emails.length + " Person";
+    }
     localStorage.setItem("emails", JSON.stringify(emails));
     input.value = "";
     console.log("Emails on the list: " + emails);
@@ -23,10 +32,15 @@ function send() {
 }
 
 function deleteall() {
-        if (confirm("Do you really want to delete all the entrys?")) {
-            emails.length = 0;
-            number.innerHTML = emails.length;
-            console.warn("All entrys were deleted!");
+        if (confirm("Do you really want to delete all the entries?")) {
+            emails = [];
+            localStorage.setItem("emails", JSON.stringify(emails)); // You write this code, when something happens with the entries in the array
+            if (emails.length > 1) {
+                number.innerHTML = emails.length + " Persons";
+            } else {
+                number.innerHTML = emails.length + " Person";
+            }
+            console.warn("All entries were deleted!");
             console.log(emails);
         }
    
