@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <style>
-        span {
+        #span {
             display: none;
             color: red;
             font-family: Arial, Helvetica, sans-serif;
@@ -78,6 +78,12 @@
             text-align: center;
             padding: 10px;
         }
+
+        .numberpersons {
+            text-align: center;
+            margin-top: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,6 +97,10 @@
         <input placeholder="E-Mail" id="input">
         <button id="btn" onclick="send()">Sign In</button>
     </div>
+    <div class="numberpersons">
+        <span id="numberp"></span> <text style="margin-top: 200px;"> Persons are already in the list.</text>
+    </div>
+   
   
     <span id="span">Please enter a valid email</span>
 
