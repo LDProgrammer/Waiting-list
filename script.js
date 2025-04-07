@@ -35,11 +35,7 @@ function deleteall() {
         if (confirm("Do you really want to delete all the entries?")) {
             emails = [];
             localStorage.setItem("emails", JSON.stringify(emails)); // You write this code, when something happens with the entries in the array
-            if (emails.length > 1) {
-                number.innerHTML = emails.length + " Persons are";
-            } else {
-                number.innerHTML = emails.length + " Person is";
-            }
+            number.innerHTML = emails.length + " Person is";
             console.warn("All entries were deleted!");
             console.log(emails);
         }
